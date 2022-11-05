@@ -11,7 +11,7 @@ body {
     color: white;
 }
 
-main{
+.main{
     height: 80vh;
     display: flex;
     flex-direction: column;
@@ -60,3 +60,6 @@ main{
 }
 
 
+.postSearch{
+    height: 20vh;
+}
