@@ -3,9 +3,12 @@
   --sec-bg: #141414;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: sans-serif;
   background-color: var(--main-bg);
   color: white;
@@ -47,11 +50,62 @@ body {
   height: 4.3em;
   border: none;
   width: 8em;
-  background-color: rgb(65, 88, 88);
   border-radius: 0 1em 1em 0;
   color: white;
+  background-color: orangered;
 }
 
 .postSearch {
   height: 20vh;
+}
+
+.details {
+  max-width: 80%;
+  margin: 2em auto;
+  background-color: rgb(39, 39, 39);
+}
+.details .hero {
+  display: flex;
+}
+.details .hero .overview {
+  padding: 0 3em;
+}
+.details .hero .overview .title {
+  display: flex;
+  padding: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+.details .hero .overview .title h2 {
+  font-size: 3rem;
+}
+.details .hero .overview .title .rating img {
+  width: 40px;
+  margin-right: 5px;
+}
+.details .hero .overview .title .rating span {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.details .hero .overview .genre {
+  margin-bottom: 1em;
+}
+.details .hero .overview .genre span {
+  border: 2px solid orangered;
+  margin: 0.3em;
+  padding: 8px;
+  border-radius: 20px;
+}
+.details .hero .overview .genre span:hover {
+  background-color: orangered;
+  color: black;
+}
+.details .hero .overview .plot {
+  margin-top: 2em;
+  color: whitesmoke;
+  font-size: large;
+}
+.details .hero .overview p {
+  border-bottom: 1px solid orangered;
+  padding: 1em 0;
 }/*# sourceMappingURL=style.css.map */
