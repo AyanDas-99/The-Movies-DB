@@ -60,6 +60,7 @@ body {
 }
 
 .details {
+  display: none;
   margin: 2em auto;
   max-width: 80%;
 }
