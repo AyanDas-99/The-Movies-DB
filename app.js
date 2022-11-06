@@ -4,6 +4,7 @@ const title = document.getElementById('query');
 const year = document.getElementById('year');
 const submit = document.getElementById('submit');
 
+const detailsDiv = document.querySelector('.details');
 const poster = document.getElementById('poster');
 const titleDisplay = document.querySelector('.title');
 const mainRating = document.querySelector('#main-rating');
@@ -32,8 +33,9 @@ for (i = 0; i < coll.length; i++) {
 
 form.addEventListener('submit', async(event)=>{
     event.preventDefault();
-    const movie = await getData(title.value, parseInt(year.value));
     displayPreSetup();
+    const movie = await getData(title.value, parseInt(year.value));
+    detailsDiv.style.display = 'block';
     displaySetup(movie);
 });
 
@@ -52,9 +54,18 @@ const getData = async(title, year)=>{
 
 const displayPreSetup = ()=>{
     mainDiv.classList.add('postSearch')
+    const gif = document.createElement('img');
+    gif.id = 'loaderGif';
+    gif.src = 'media/Spinner-1s-200px.gif'
+    gif.style.display = 'block'
+    gif.style.margin = '2em auto'
+    document.body.appendChild(gif);
 }
 
 function displaySetup(movie) {
+    let gif = document.getElementById('loaderGif');
+    document.body.removeChild(gif);
+    
     console.log(movie);
     poster.src = movie.Poster;
     titleDisplay.firstElementChild.textContent = movie.Title;
