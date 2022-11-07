@@ -60,7 +60,6 @@ body {
 }
 
 .details {
-  display: none;
   margin: 2em auto;
   max-width: 80%;
 }
@@ -106,10 +105,6 @@ body {
   color: whitesmoke;
   font-size: large;
 }
-.details .hero .overview p {
-  border-bottom: 1px solid orangered;
-  padding: 1em 0;
-}
 
 .collapsible {
   margin-top: 3em;
@@ -125,8 +120,23 @@ body {
 }
 
 .content {
-  display: none;
   padding: 1em;
   background-color: rgb(39, 39, 39);
   border: 10px solid black;
+}
+.content .extra-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.content .ratings {
+  margin: 2em 0;
+}
+.content p {
+  padding: 0.5em 0;
+}
+
+p.styled {
+  border-bottom: 1px solid orangered;
+  padding: 1em 0;
 }/*# sourceMappingURL=style.css.map */

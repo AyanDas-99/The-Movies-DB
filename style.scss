@@ -69,7 +69,7 @@ body {
 
 
 .details {
-    display: none;
+    // display: none;
     margin: 2em auto;
     max-width: 80%;
 
@@ -126,10 +126,7 @@ body {
                 font-size: large;
             }
 
-            p {
-                border-bottom: 1px solid orangered;
-                padding: 1em 0;
-            }
+
         }
     }
 
@@ -149,8 +146,28 @@ body {
 }
 
 .content {
-    display: none;
+    // display: none;
     padding: 1em;
     background-color: rgb(39, 39, 39);
     border: 10px solid black;
+
+    .extra-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .ratings {
+        margin: 2em 0;
+    }
+
+    p {
+        padding: .5em 0;
+    }
+}
+
+p.styled {
+    border-bottom: 1px solid orangered;
+    padding: 1em 0;
+
 }
